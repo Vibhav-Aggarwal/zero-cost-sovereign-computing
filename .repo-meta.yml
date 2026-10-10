@@ -1,0 +1,5 @@
+template: paper-repo-template
+template_version: 1.0.0
+license_type: content
+paper_doi: "10.5281/zenodo.19654425"
+concept_doi: ""   # set after first GitHub Release -> Zenodo

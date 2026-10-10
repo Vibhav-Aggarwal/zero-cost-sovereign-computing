@@ -1,13 +1,14 @@
-# lala-net-public
+# Zero-Cost Sovereign Computing — reference configuration
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19654425.svg)](https://doi.org/10.5281/zenodo.19654425)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19654425.svg)](https://doi.org/10.5281/zenodo.19654425)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--7686--7119-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0000-7686-7119)
 
 Reference configuration for the 10-node heterogeneous sovereign compute cluster described in:
 
-> Aggarwal, V. (2026). *Zero-Cost Sovereign Computing: A 10-Node Heterogeneous Cluster Using Headscale, Cloudflare Tunnels, and Oracle Always-Free Tier.*
-> Zenodo. https://doi.org/10.5281/zenodo.19654425
+> Aggarwal, V. (2026). *Zero-Cost Sovereign Computing: A 10-Node Heterogeneous Cluster Using Headscale, Cloudflare Tunnels, and Oracle Always-Free Tier.* Zenodo. https://doi.org/10.5281/zenodo.19654425
+
+> A software concept DOI will be added here once the first GitHub Release is archived to Zenodo.
 
 ## What this repo contains
 
@@ -16,7 +17,7 @@ Companion artifact to the paper. All secrets, credentials, keys, real hostnames,
 ```
 lala-net-public/
 ├── README.md                 (this file)
-├── LICENSE                   (MIT)
+├── LICENSE                   (CC BY 4.0)
 ├── headscale/
 │   ├── config.yaml.example   (sanitized Headscale v0.28 config)
 │   └── acl.hujson.example    (user + node-level ACL policy)
@@ -68,7 +69,7 @@ lala-net-public/
 
 ## License
 
-MIT License. See [LICENSE](./LICENSE).
+Content and configuration: Creative Commons Attribution 4.0 International (CC BY 4.0). See [LICENSE](./LICENSE).
 
 ## Author
 
