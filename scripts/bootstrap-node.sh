@@ -3,7 +3,7 @@
 # Intended as a template; adjust USERNAME, TUNNEL_ID, etc. before running.
 set -euo pipefail
 
-USERNAME="${USERNAME:-vibhavaggarwal}"
+USERNAME="${USERNAME:-operator}"
 HEADSCALE_URL="${HEADSCALE_URL:-https://YOUR_CONTROL_PLANE_DOMAIN}"
 HEADSCALE_PREAUTH_KEY="${HEADSCALE_PREAUTH_KEY:?must set HEADSCALE_PREAUTH_KEY env var}"
 

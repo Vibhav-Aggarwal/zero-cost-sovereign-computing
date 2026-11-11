@@ -4,76 +4,64 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--7686--7119-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0000-7686-7119)
 
-Reference configuration for the 10-node heterogeneous sovereign compute cluster described in:
+Reference configuration and companion artifact for the heterogeneous sovereign compute cluster described in:
 
-> Aggarwal, V. (2026). *Zero-Cost Sovereign Computing: A 10-Node Heterogeneous Cluster Using Headscale, Cloudflare Tunnels, and Oracle Always-Free Tier.* Zenodo. https://doi.org/10.5281/zenodo.19654425
+> Aggarwal, V. (2026). *Zero-Cost Sovereign Computing: A Reproducible Multi-Node Cluster from mDNS, a Mesh VPN, Cloud Tunnels, and Free-Tier VPSs.* (Version 2). Zenodo. https://doi.org/10.5281/zenodo.19654425
 
-> A software concept DOI will be added here once the first GitHub Release is archived to Zenodo.
+The complete publication-ready Version 2 manuscript is archived in this repository:
+📄 **[aggarwal-2026-zero-cost-sovereign-computing-v2.pdf](aggarwal-2026-zero-cost-sovereign-computing-v2.pdf)**
+
+---
 
 ## What this repo contains
 
-Companion artifact to the paper. All secrets, credentials, keys, real hostnames, and personal data have been redacted. The configurations here are a starting-point *template*, not a working deployment.
+All secrets, credentials, keys, real hostnames, and personal data have been strictly redacted and replaced with descriptive placeholders. The configurations here are a starting-point *template*, not an active deployment.
 
 ```
-lala-net-public/
-├── README.md                 (this file)
-├── LICENSE                   (CC BY 4.0)
+zero-cost-sovereign-computing/
+├── README.md                                    (this file)
+├── aggarwal-2026-zero-cost-sovereign-computing-v2.pdf  (Version 2 publication PDF)
+├── LICENSE                                      (CC BY 4.0)
+├── CITATION.cff                                 (Machine-readable citation metadata)
 ├── headscale/
-│   ├── config.yaml.example   (sanitized Headscale v0.28 config)
-│   └── acl.hujson.example    (user + node-level ACL policy)
+│   ├── config.yaml.example                      (Sanitized Headscale v0.28 config)
+│   └── acl.hujson.example                       (User + node-level ACL policy)
 ├── cloudflared/
-│   └── config.yml.example    (per-node tunnel with ingress rules)
+│   └── config.yml.example                       (Per-node tunnel with ingress rules)
 ├── mcp-proxy/
-│   ├── mcp-server.service    (systemd unit for mcp-proxy)
-│   └── env.example           (allowed-directory list per node)
+│   ├── mcp-server.service                       (systemd unit for mcp-proxy)
+│   └── env.example                              (Allowed-directory list template)
 ├── scripts/
-│   └── bootstrap-node.sh     (minimal bootstrap for a new Ubuntu node)
+│   └── bootstrap-node.sh                        (Minimal bootstrap script for Ubuntu)
 └── diagrams/
-    ├── fig1-topology.mmd          (Mermaid source of Figure 1)
-    ├── fig2-mcp-federation.mmd    (Mermaid source of Figure 2)
-    └── fig4-headscale-flow.mmd    (Mermaid source of Figure 4)
+    ├── fig1-topology.mmd                        (Mermaid source of Figure 1)
+    ├── fig2-mcp-federation.mmd                  (Mermaid source of Figure 2)
+    └── fig4-headscale-flow.mmd                  (Mermaid source of Figure 4)
 ```
 
-## Paper
+---
 
-- **Preprint (Zenodo, v1)**: https://doi.org/10.5281/zenodo.19654425
-- **PDF**: available on the Zenodo record above
-- **arXiv**: cross-post pending (endorsement in progress)
+## Key Highlights (Version 2 Refresh)
 
-## Key findings
+- **11 Heterogeneous Nodes**: Predominantly repurposed, secondhand, and minimal-new hardware spanning 5 segments: **Cloud · Lab · Office · Home · Nomadic** (including an added `test-server` node on a secondhand 2014 Mac mini).
+- **Invoice-Verified Capital Accounting**: Marginal hardware capital to assemble the cluster is **≈ ₹51,525 (≈ USD 625)**, against a historical acquisition cost across prior owners and uses of **≥ USD 13,000**.
+- **Recurring Cloud Fees**: Driven to roughly **₹300/month (≈ USD 3.60/month)**.
+- **Continuous Operation**: Over **20 months** of verified production operation (February 2025 – October 2026).
+- **Three-Plane Addressing**: Zero-configuration LAN discovery (`.local` mDNS/Avahi) → Mesh VPN (`100.64.0.0/10` via Headscale) → Cloudflare Tunnels (public ingress).
+- **Agentic AI Federation**: Federation of seven Model Context Protocol (MCP) server endpoints enabling autonomous tool access across nodes.
+- **Measured Network Benchmarks**: Includes route latency and throughput comparisons across LAN, direct tailnet, DERP relay, and Cloudflare access paths (§6.4).
 
-- 10 heterogeneous nodes, predominantly repurposed / secondhand hardware
-- Marginal capital to assemble this cluster: **≈ USD 325**, against a historical acquisition cost across prior owners / uses of **≥ USD 13,000**
-- Recurring subscription fees: **≈ INR 300/month (USD 3.60/month)**
-- 14 months continuous operation (Feb 2025 – Apr 2026)
-- Self-hosted Headscale v0.28 mesh VPN + Cloudflare Tunnels + OCI Always-Free Tier
-- 7-node MCP (Model Context Protocol) server federation for agentic-LLM cluster access
-- "Nomadic" subnet (admin-server + consumer WiFi router) that physically travels with the operator
+---
 
 ## Cite
 
 ```bibtex
-@misc{aggarwal_2026_zerocost,
+@article{aggarwal_2026_zerocost_v2,
   author       = {Aggarwal, Vibhav},
-  title        = {{Zero-Cost Sovereign Computing: A 10-Node
-                   Heterogeneous Cluster Using Headscale,
-                   Cloudflare Tunnels, and Oracle Always-Free Tier}},
-  month        = apr,
+  title        = {{Zero-Cost Sovereign Computing: A Reproducible Multi-Node Cluster from mDNS, a Mesh VPN, Cloud Tunnels, and Free-Tier VPSs}},
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1},
   doi          = {10.5281/zenodo.19654425},
   url          = {https://doi.org/10.5281/zenodo.19654425}
 }
 ```
-
-## License
-
-Content and configuration: Creative Commons Attribution 4.0 International (CC BY 4.0). See [LICENSE](./LICENSE).
-
-## Author
-
-**Vibhav Aggarwal** — Founder, Herbilé · Co-founder, Lala City · Independent Researcher
-ORCID: [0009-0000-7686-7119](https://orcid.org/0009-0000-7686-7119)
-Email: vibhav@vibhavaggarwal.com
-Web: https://www.vibhavaggarwal.com/

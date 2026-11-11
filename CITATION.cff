@@ -1,15 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite both it and the paper below."
-title: "Zero-Cost Sovereign Computing — 10-Node Heterogeneous Cluster (reference configuration)"
-abstract: "Sanitized reference configuration (Headscale, Cloudflare Tunnels, MCP federation) for the paper \"Zero-Cost Sovereign Computing: A 10-Node Heterogeneous Cluster Using Headscale, Cloudflare Tunnels, and Oracle Always-Free Tier\". A starting-point template, not a working deployment."
+title: "Zero-Cost Sovereign Computing — 11-Node Heterogeneous Cluster (reference configuration)"
+abstract: "Sanitized reference configuration (Headscale, Cloudflare Tunnels, MCP federation) for the paper \"Zero-Cost Sovereign Computing: A Reproducible Multi-Node Cluster from mDNS, a Mesh VPN, Cloud Tunnels, and Free-Tier VPSs\". A starting-point template, not a working deployment."
 type: software
 authors:
   - family-names: Aggarwal
     given-names: Vibhav
     orcid: "https://orcid.org/0009-0000-7686-7119"
     affiliation: "Independent Researcher, Gurugram, India"
-version: "1.0.0"
-date-released: "2026-10-10"
+version: "2.0.0"
+date-released: "2026-10-14"
 license: CC-BY-4.0
 repository-code: "https://github.com/Vibhav-Aggarwal/zero-cost-sovereign-computing"
 url: "https://github.com/Vibhav-Aggarwal/zero-cost-sovereign-computing"
@@ -18,9 +18,10 @@ keywords:
   - headscale
   - cloudflare-tunnel
   - heterogeneous-cluster
+  - mcp-federation
 preferred-citation:
   type: article
-  title: "Zero-Cost Sovereign Computing: A 10-Node Heterogeneous Cluster Using Headscale, Cloudflare Tunnels, and Oracle Always-Free Tier"
+  title: "Zero-Cost Sovereign Computing: A Reproducible Multi-Node Cluster from mDNS, a Mesh VPN, Cloud Tunnels, and Free-Tier VPSs"
   authors:
     - family-names: Aggarwal
       given-names: Vibhav
